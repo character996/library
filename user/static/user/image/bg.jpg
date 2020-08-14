@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://www.lanrentuku.com/bg/b/toumingbeijing.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="applicable-device" content="pc">
+<link rel="alternate" media="only screen and(max-width: 640px)" href="https://m.lanrentuku.com/bg/b/toumingbeijing.html">
+<meta name="mobile-agent" content="format=html5; url=https://m.lanrentuku.com/bg/b/toumingbeijing.html">
+
+<title>透明网页背景（结合css背景色使用）_背景专辑_懒人图库</title>
+<meta name="keywords" content="网页背景,透明背景,网页背景,无接缝网页背景,平铺素材,背景专辑">
+<meta name="description" content="此专辑为透明网页背景（结合css背景色使用）。">
+<link rel="stylesheet" type="text/css" href="./1_files/a.css">
+<link rel="stylesheet" type="text/css" href="./1_files/bg.css">
+<script src="./1_files/hm.js"></script><script src="./1_files/push.js"></script><script type="text/javascript" src="./1_files/jquery.js"></script>
+<script type="text/javascript" src="./1_files/a.js"></script>
+<script type="text/javascript" src="./1_files/bg.js"></script>
+<script type="text/javascript" src="./1_files/jquery.blockUI.js"></script>
+</head>
+
+<body>
+<div class="topbg">
+<div class="topnav">
+<div class="l">欢迎来到懒人图库！</div>
+<div class="r"><a href="https://www.lanrentuku.com/">返回首页</a> | <a href="https://www.lanrentuku.com/about/sitemap.html"> 网站地图</a> | <a href="https://tool.lanrentuku.com/" target="_blank">懒人工具箱</a></div>
+</div>
+</div>
+<div id="b">
+<!--顶部开始-->
+<div id="header">
+<a href="https://www.lanrentuku.com/" class="logo"><img src="./1_files/logo.jpg" alt="懒人图库"></a>
+</div>
+<div id="daohang">
+  <li class="tab home"><a href="https://www.lanrentuku.com/" class="tablink">首 页</a></li><li class="tab"><a href="https://www.lanrentuku.com/dianshang/" class="tablink arwlink">电商素材</a></li><li class="tab"><a href="https://www.lanrentuku.com/guanggao/" class="tablink arwlink">广告平面</a></li><li class="tab"><a href="https://www.lanrentuku.com/chahua/" class="tablink arwlink">插画配图</a></li><li class="tab"><a href="https://www.lanrentuku.com/uidesign/" class="tablink arwlink">UI设计</a></li><li class="tab"><a href="https://www.lanrentuku.com/image/" class="tablink arwlink">专题合集</a></li>
+  <li class="tab dropdown"><a href="https://www.lanrentuku.com/vector/" class="tablink arwlink">矢量素材</a>
+  <ul class="subnav">
+    <a href="https://www.lanrentuku.com/vector/flower/">矢量花纹</a>
+    <a href="https://www.lanrentuku.com/vector/classics/">经典实用</a>
+    <a href="https://www.lanrentuku.com/vector/festival/">矢量节日</a>
+    <a href="https://www.lanrentuku.com/vector/design/">广告设计</a>
+    <a href="https://www.lanrentuku.com/vector/chinese_style/">矢量中国</a>
+    <a href="https://www.lanrentuku.com/vector/icon/">矢量图标</a>
+    <a href="https://www.lanrentuku.com/vector/trend/">矢量潮流</a>
+    <a href="https://www.lanrentuku.com/vector/logo/">矢量标志</a>
+    <a href="https://www.lanrentuku.com/vector/life/">生活百科</a>
+    <a href="https://www.lanrentuku.com/vector/cartoon/">矢量卡通</a>
+    <a href="https://www.lanrentuku.com/vector/people/">矢量人物</a>
+    <a href="https://www.lanrentuku.com/vector/transport/">交通运输</a>
+    <a href="https://www.lanrentuku.com/vector/animal/">矢量动物</a>
+    <a href="https://www.lanrentuku.com/vector/plant/">矢量植物</a>
+    <a href="https://www.lanrentuku.com/vector/landscape/">风景建筑</a>
+    <a href="https://www.lanrentuku.com/vector/food_fruit/">食品果蔬</a>
+    <a href="https://www.lanrentuku.com/vector/font/">矢量字体</a>
+    <a href="https://www.lanrentuku.com/vector/background/">矢量背景</a>
+    <a href="https://www.lanrentuku.com/vector/sport/">体育运动</a>
+    <a href="https://www.lanrentuku.com/vector/other/">其他矢量</a>
+  </ul>
+  </li>  
+  <li class="tab dropdown"><a href="https://www.lanrentuku.com/png/" class="tablink arwlink">PNG图标</a> 
+  <ul class="subnav">
+    <a href="https://www.lanrentuku.com/png/128x128.html">128x128</a>
+    <a href="https://www.lanrentuku.com/png/256x256.html">256x256</a>
+    <a href="https://www.lanrentuku.com/png/512x512.html">512x512</a>
+    <a href="https://www.lanrentuku.com/png/32x32.html">32x32</a>
+    <a href="https://www.lanrentuku.com/png/48x48.html">48x48</a>
+    <a href="https://www.lanrentuku.com/png/64x64.html">64x64</a>
+  </ul>
+  </li>
+  <li class="tab dropdown"><a href="https://www.lanrentuku.com/js/" class="tablink arwlink">JS代码</a>
+  <ul class="subnav">
+<a href="https://www.lanrentuku.com/js/jiaodiantu.html">焦 点 图</a>
+<a href="https://www.lanrentuku.com/js/quanping.html">全屏广告</a>
+<a href="https://www.lanrentuku.com/js/duilian.html">对联广告</a>
+<a href="https://www.lanrentuku.com/js/kefu.html">在线客服</a>
+<a href="https://www.lanrentuku.com/js/xiangce.html">相册代码</a>
+<a href="https://www.lanrentuku.com/js/daohang.html">菜单导航</a>
+<a href="https://www.lanrentuku.com/js/biaoqian.html">TAB标签</a>
+<a href="https://www.lanrentuku.com/js/piaofu.html">悬浮漂浮</a>
+<a href="https://www.lanrentuku.com/js/shipin.html">视频播放</a>
+<a href="https://www.lanrentuku.com/js/tupian.html">图片特效</a>
+<a href="https://www.lanrentuku.com/js/fanpai.html">翻牌书角</a>
+<a href="https://www.lanrentuku.com/js/qita.html">其他代码</a>
+<a href="https://www.lanrentuku.com/js/nav.html">导航菜单</a>
+<a href="https://www.lanrentuku.com/js/form.html">表单按钮</a>
+<a href="https://www.lanrentuku.com/js/text.html">文字特效</a>
+<a href="https://www.lanrentuku.com/js/table.html">表格图层</a>
+<a href="https://www.lanrentuku.com/js/picture.html">图片特效</a>
+<a href="https://www.lanrentuku.com/js/date.html">时间日期</a>
+<a href="https://www.lanrentuku.com/js/scroll.html">滚动代码</a>
+<a href="https://www.lanrentuku.com/js/window.html">窗口特效</a>
+<a href="https://www.lanrentuku.com/js/color.html">颜色背景</a>
+<a href="https://www.lanrentuku.com/js/website.html">网站常用</a>
+<a href="https://www.lanrentuku.com/js/css.html">CSS样式</a>
+<a href="https://www.lanrentuku.com/js/other.html">其他特效</a> 
+  </ul>
+  </li>
+  <li class="tab dropdown"><a href="https://www.lanrentuku.com/psd/" class="tablink arwlink">PSD素材</a>
+  <ul class="subnav">
+            <a href="https://www.lanrentuku.com/psd/sheji/">设计元素</a>
+            <a href="https://www.lanrentuku.com/psd/wangye/">网页元素</a>
+            <a href="https://www.lanrentuku.com/psd/anniu/">按钮素材</a>
+            <a href="https://www.lanrentuku.com/psd/huawen/">花纹元素</a>
+            <a href="https://www.lanrentuku.com/psd/fangchan/">房产模板</a>
+            <a href="https://www.lanrentuku.com/psd/mingpian/">名片模板</a>
+            <a href="https://www.lanrentuku.com/psd/ziti/">字体设计</a>
+            <a href="https://www.lanrentuku.com/psd/tubiao/">图标设计</a>
+            <a href="https://www.lanrentuku.com/psd/baozhuang/">包装设计</a>
+            <a href="https://www.lanrentuku.com/psd/jiemian/">界面设计</a>
+            <a href="https://www.lanrentuku.com/psd/nianli/">年历台历</a>
+            <a href="https://www.lanrentuku.com/psd/zhongguo/">中国元素</a>
+            <a href="https://www.lanrentuku.com/psd/katong/">卡通素材</a>
+            <a href="https://www.lanrentuku.com/psd/renwu/">人物素材</a>
+            <a href="https://www.lanrentuku.com/psd/shenghuo/">生活百科</a>
+  </ul>
+  </li>
+  <li class="tab dropdown"><a href="https://www.lanrentuku.com/tupian/" class="tablink arwlink">图片素材</a>
+  <ul class="subnav">
+<a href="https://www.lanrentuku.com/tupian/beijingtupian/">背景图片</a>
+<a href="https://www.lanrentuku.com/tupian/renwutupian/">人物图片</a>
+<a href="https://www.lanrentuku.com/tupian/jingwutupian/">静物图片</a>
+<a href="https://www.lanrentuku.com/tupian/dongwutupian/">动物图片</a>
+<a href="https://www.lanrentuku.com/tupian/zhiwutupian/">植物花卉</a>
+<a href="https://www.lanrentuku.com/tupian/meishitupian/">美食图片</a>
+<a href="https://www.lanrentuku.com/tupian/shuiguotupian/">水果图片</a>
+<a href="https://www.lanrentuku.com/tupian/shucaitupian/">蔬菜图片</a>
+  </ul>
+  </li>
+  <li class="tab dropdown"><a href="https://www.lanrentuku.com/lanren/" class="tablink arwlink">网页素材</a>
+  <ul class="subnav">
+<a href="https://www.lanrentuku.com/gif/">网页小图片</a>
+<a href="https://www.lanrentuku.com/bg/">网页背景</a>
+<a href="https://www.lanrentuku.com/software/">软件分享</a>
+<a href="https://www.lanrentuku.com/qq/">QQ表情</a>
+<a href="https://www.lanrentuku.com/news/">酷文分享</a>
+<a href="https://www.lanrentuku.com/font/ygy/">字体下载</a>
+  </ul>
+  </li>
+  <li class="tab dropdown"><a href="https://www.lanrentuku.com/ued/" class="tablink arwlink">用户体验</a>
+  <ul class="subnav">
+<a href="https://www.lanrentuku.com/ued/ui/">视觉设计</a>
+<a href="https://www.lanrentuku.com/ued/id/">交互设计</a>
+<a href="https://www.lanrentuku.com/ued/ad/">广告设计</a>
+<a href="https://www.lanrentuku.com/ued/di/">设计思想</a>
+<a href="https://www.lanrentuku.com/ued/ur/">用户研究</a>
+<a href="https://www.lanrentuku.com/ued/wd/">前端开发</a>
+<a href="https://www.lanrentuku.com/ued/pm/">产品经理</a>
+<a href="https://www.lanrentuku.com/ued/doc/">资源文档</a>
+  </ul>
+  </li>
+  <li class="tab dropdown"><a href="https://www.lanrentuku.com/show/" class="tablink arwlink">设计分享</a>
+  <ul class="subnav">
+            <a href="https://www.lanrentuku.com/show/pingmian/">平面设计</a>
+            <a href="https://www.lanrentuku.com/show/baozhuang/">包装设计</a>
+            <a href="https://www.lanrentuku.com/show/mingpian/">名片设计</a>
+            <a href="https://www.lanrentuku.com/show/qita/">其他艺术</a>
+            <a href="https://www.lanrentuku.com/show/guanggao/">广告创意</a>
+            <a href="https://www.lanrentuku.com/show/biaozhi/">标志设计</a>
+            <a href="https://www.lanrentuku.com/show/huihua/">绘画艺术</a>
+            <a href="https://www.lanrentuku.com/show/chanpin/">产品设计</a>
+            <a href="https://www.lanrentuku.com/show/sheying/">摄影欣赏</a>
+            <a href="https://www.lanrentuku.com/show/jiaohu/">交互设计</a>
+            <a href="https://www.lanrentuku.com/show/shipin/">视频广告</a>
+  </ul>
+  </li>
+  <li class="tab"><a href="https://tool.lanrentuku.com/" class="tablink arwlink">懒人工具箱</a>
+  </li>
+</div>
+<div id="ss">
+<div class="yulu"><script>dy("yulu");</script></div>
+<div class="search"><script>dysearch();</script><form name="formsearch" onsubmit="return bottomForm();" method="post">
+<div id="x1" class="sa">
+<a id="s0">矢量</a>
+<span style="display:none" id="x2" class="lanmu"> 
+<a id="s1">矢量</a>
+<a id="s2">代码</a>
+<a id="s3">图标</a>
+<a id="s5">全站</a>
+</span>
+</div> 
+<input id="typeid" name="typeid" type="hidden" value="1">
+<input id="q" class="sb" name="keyword" onfocus="if(this.value==&#39;请输入关键词&#39;){this.value=&#39;&#39;;}else{this.select();}this.style.color=&#39;black&#39;;" value="请输入关键词">
+<input class="sc" name="Input" type="submit" value="">
+</form>
+</div>
+</div>
+<div id="topad" style="display: none;">
+    <script>dy("top1200x90");</script>
+<div class="top234x90"><script>dy("top234x90");</script></div>
+<div class="top960x90"><script>dy("top960x90");</script></div>
+</div>
+<!--顶部结束-->
+
+<div id="l">
+<div class="place">当前位置：<a href="https://www.lanrentuku.com/">首页</a> &gt; <a href="https://www.lanrentuku.com/bg/">网页背景</a> &gt; <a href="https://www.lanrentuku.com/bg/b/">背景专辑</a> &gt; </div>
+<div class="title">
+<h1>透明网页背景（结合css背景色使用）</h1><span><script>dy("bdshare");</script><font color="#DDD">懒人图库</font></span>
+<div class="zuozhe">2015-02-12 23:39　来源/作者：懒人图库　类别：<a href="https://www.lanrentuku.com/bg/b/">背景专辑</a>　<a href="https://www.lanrentuku.com/bg/b/yuandianbeijing.html" class="zuozhe" title="上一篇：圆点网页背景">&#171;</a> <a href="https://www.lanrentuku.com/bg/b/huawenbeijing.html" class="zuozhe" title="下一篇：花纹网页背景">&#187;</a></div>
+</div><!-- /title -->
+
+<div class="content-b">
+<ul class="content-bg">
+<li class="box_btn" style="background:url(//img.lanrentuku.com/img/allimg/1305/5-13050GTF0.png);" title="透明网页背景" picindex="0"><div class="save" style="top: 192px;"><a href="https://www.lanrentuku.com/savepic/img/allimg/1305/5-13050GTF0.png"></a>预览背景</div></li>
+<li class="box_btn" style="background:url(//img.lanrentuku.com/img/allimg/1305/5-13050GTF7.png);" title="" picindex="1"><div class="save" style="top: 192px;"><a href="https://www.lanrentuku.com/savepic/img/allimg/1305/5-13050GTF7.png"></a>预览背景</div></li>
+<li class="box_btn" style="background:url(//img.lanrentuku.com/img/allimg/1305/5-13050GTF9.png);" title="" picindex="2"><div class="save" style="top: 192px;"><a href="https://www.lanrentuku.com/savepic/img/allimg/1305/5-13050GTF9.png"></a>预览背景</div></li>
+<li class="box_btn" style="background:url(//img.lanrentuku.com/img/allimg/1305/5-13050GTF9-50.png);" title="" picindex="3"><div class="save"><a href="https://www.lanrentuku.com/savepic/img/allimg/1305/5-13050GTF9-50.png"></a>预览背景</div></li>
+<li class="box_btn" style="background:url(//img.lanrentuku.com/img/allimg/1305/5-13050GTG0.gif);" title="透明网页背景图片" picindex="4"><div class="save"><a href="https://www.lanrentuku.com/savepic/img/allimg/1305/5-13050GTG0.gif"></a>预览背景</div></li>
+<li class="box_btn" style="background:url(//img.lanrentuku.com/img/allimg/1502/5-150212233924.gif);" title="透明网页背景图片" picindex="5"><div class="save" style="top: 192px;"><a href="https://www.lanrentuku.com/savepic/img/allimg/1502/5-150212233924.gif"></a>预览背景</div></li>
+<li class="box_btn" style="background:url(//img.lanrentuku.com/img/allimg/1502/5-150212233925.png);" title="透明网页背景图片" picindex="6"><div class="save" style="top: 192px;"><a href="https://www.lanrentuku.com/savepic/img/allimg/1502/5-150212233925.png"></a>预览背景</div></li>
+<li class="box_btn" style="background:url(//img.lanrentuku.com/img/allimg/1502/5-150212233925-50.png);" title="透明网页背景图片" picindex="7"><div class="save"><a href="https://www.lanrentuku.com/savepic/img/allimg/1502/5-150212233925-50.png"></a>预览背景</div></li>
+<li class="box_btn" style="background:url(//img.lanrentuku.com/img/allimg/1502/5-150212233925-51.png);" title="透明网页背景图片" picindex="8"><div class="save"><a href="https://www.lanrentuku.com/savepic/img/allimg/1502/5-150212233925-51.png"></a>预览背景</div></li>
+<li class="box_btn" style="background:url(//img.lanrentuku.com/img/allimg/1502/5-150212233925-52.png);" title="透明网页背景图片" picindex="9"><div class="save"><a href="https://www.lanrentuku.com/savepic/img/allimg/1502/5-150212233925-52.png"></a>预览背景</div></li>
+</ul>
+        <div class="jieshao"><br>
+          <p><strong>下载提示：</strong>请直接在背景图片上右键“背景另存为”或点击“预览背景”在弹出界面中保存你喜欢的背景。压缩包不定期更新。</p>
+          <p><strong>使用方法：</strong>1、通过CSS作为网页背景图片调用。2、可在PS中定义为图案，然后使用填充里的图案功能铺满选区。</p>
+        </div>
+<div class="dede_pages">
+<ul>
+
+</ul>
+</div>
+        <div class="ny728x90"><script>dy("ny728x90-a");</script></div>
+<div class="xiazai">
+            <a class="bt-blue" href="http://d.down.cljsgc.cn/down/zip/1305/071846585_lanrentuku.com.zip" target="_blank">下载地址1</a>
+            <a class="bt-green" href="http://d.down.cljsgc.cn/down/zip/1305/071846585_lanrentuku.com.zip" target="_blank">下载地址2</a>
+</div>
+        <div class="ny728x90"><script>dy("ny728x90-b");</script>* 特别声明：本站图片收集自网络，仅供个人学习交流使用，版权归原作者所有，请勿用于任何商业用途。如有侵犯您的版权，请及时联系邮箱：lanrentuku@126.com ，我们将尽快删除处理。</div>
+        <div class="tag">标签：<a href="https://www.lanrentuku.com/sort/%CD%F8%D2%B3%B1%B3%BE%B0/">网页背景</a><a href="https://www.lanrentuku.com/sort/%CD%B8%C3%F7%B1%B3%BE%B0/">透明背景</a></div>
+<div class="tag">最新合集：<a href="https://www.lanrentuku.com/image/jiaoshijieyingxiaohaibao.html">教师节营销海报</a><a href="https://www.lanrentuku.com/image/baoxianjingdiantupian.html">保险经典图片</a><a href="https://www.lanrentuku.com/image/huazhuangpinhaibaosheji.html">化妆品海报设计</a><a href="https://www.lanrentuku.com/image/bayijianjunjiezhuanqu.html">八一建军节专区</a><a href="https://www.lanrentuku.com/image/dashuxiguachahua.html">大暑西瓜插画</a><a href="https://www.lanrentuku.com/image/liqiupophaibao.html">立秋pop海报</a><a href="https://www.lanrentuku.com/image/zhongguomeishihaibao.html">中国美食海报</a><a href="https://www.lanrentuku.com/image/2020jianjunjie.html">2020建军节</a><a href="https://www.lanrentuku.com/image/zuixinchunxiaohaibao.html">最新促销海报</a><a href="https://www.lanrentuku.com/image/youxiuzhaopinhaibao.html">优秀招聘海报</a><a href="https://www.lanrentuku.com/image/liqiuyingxiaohaibao.html">立秋营销海报</a><a href="https://www.lanrentuku.com/image/bayijianjunhaibao.html">八一建军海报</a><a href="https://www.lanrentuku.com/image/liqiuhaibaodesucai.html">立秋海报的素材</a><a href="https://www.lanrentuku.com/image/jianjunhaibaosheji.html">建军海报设计</a><a href="https://www.lanrentuku.com/image/zhongqiujieweihaibao.html">中秋节微海报</a></div></div><!-- /content -->
+<div class="pinglun">
+</div>
+<div class="lb700x22"><script>dy("lb700x22");</script></div>
+<div class="egg"><script>dy("egg");</script>* 懒人图库承诺：本站资源免费下载，无病毒，无弹窗，无干扰链接！</div>
+</div><!-- /l -->
+
+<div id="r">
+<div class="nav-sub">
+<dl>
+<dt class="bg"><span>网页背景</span><div></div><a href="https://www.lanrentuku.com/bg/">全部&#8250;&#8250;</a></dt>
+</dl>
+</div>
+<div class="nav-bg1">
+<a href="https://www.lanrentuku.com/bg/a/white.html" class="white" title="白色背景"></a>
+<a href="https://www.lanrentuku.com/bg/a/black.html" class="black" title="黑色背景"></a>
+<a href="https://www.lanrentuku.com/bg/a/grey.html" class="grey" title="灰色背景"></a>
+<a href="https://www.lanrentuku.com/bg/a/brown.html" class="brown" title="褐色背景"></a>
+<a href="https://www.lanrentuku.com/bg/a/orange.html" class="orange" title="橙色背景"></a>
+<a href="https://www.lanrentuku.com/bg/a/yellow.html" class="yellow" title="黄色背景"></a>
+<a href="https://www.lanrentuku.com/bg/a/green.html" class="green" title="绿色背景"></a>
+<a href="https://www.lanrentuku.com/bg/a/blue.html" class="blue" title="蓝色背景"></a>
+<a href="https://www.lanrentuku.com/bg/a/purple.html" class="purple" title="紫色背景"></a>
+<a href="https://www.lanrentuku.com/bg/a/pink.html" class="pink" title="粉色背景"></a>
+<a href="https://www.lanrentuku.com/bg/a/red.html" class="red" title="红色背景"></a>
+<a href="https://www.lanrentuku.com/bg/a/color.html" class="color" title="彩色背景"></a>
+</div>
+<div class="nav-bg2">
+<dl>
+<dd><a href="https://www.lanrentuku.com/bg/b/muwenbeijing.html"><div class="x01"></div>木纹背景</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/micaibeijing.html"><div class="x02"></div>迷彩背景</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/qiangbibeijing.html"><div class="x03"></div>墙壁背景</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/zhizhangbeijing.html"><div class="x04"></div>纸张背景</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/katongbeijing.html"><div class="x05"></div>卡通背景</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/xinxingbeijing.html"><div class="x06"></div>心形背景</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/shiwubeijing.html"><div class="x07"></div>食物背景</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/buwenbeijing.html"><div class="x08"></div>布纹背景</a></dd>
+            <dd><a href="https://www.lanrentuku.com/bg/b/shengdanbeijing.html"><div class="x09"></div>圣诞背景</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/chunjiebeijing.html"><div class="x10"></div>春节背景</a></dd>
+            <dd><a href="https://www.lanrentuku.com/bg/b/xuehuabeijing.html"><div class="x11"></div>雪花背景</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/xingxingbeijing.html"><div class="x12"></div>星星背景</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/wanshengjiebeijing.html"><div class="x13"></div>万圣背景</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/baowenbeijing.html"><div class="x14"></div>豹纹背景</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/dongtaibeijing.html"><div class="x15"></div>动态背景</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/shishangbeijing.html"><div class="x16"></div>时尚背景</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/yuandianbeijing.html"><div class="x17"></div>圆点背景</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/toumingbeijing.html"><div class="x18"></div>透明背景</a></dd>
+            <dd><a href="https://www.lanrentuku.com/bg/b/huawenbeijing.html"><div class="x19"></div>花纹背景</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/zhongguobeijing.html"><div class="x20"></div>中国背景</a></dd>
+            <dd><a href="https://www.lanrentuku.com/bg/b/gudianbeijing.html"><div class="x21"></div>古典背景</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/youcaibeijing.html"><div class="x22"></div>油彩背景</a></dd>
+            <dd><a href="https://www.lanrentuku.com/bg/b/jinshubeijing.html"><div class="x23"></div>金属背景</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/pigebeijing.html"><div class="x24"></div>皮革背景</a></dd>
+            <dd><a href="https://www.lanrentuku.com/bg/b/masaikebeijing.html"><div class="x25"></div>马赛克图</a></dd>
+<dd><a href="https://www.lanrentuku.com/bg/b/shiwenbeijing.html"><div class="x26"></div>石纹背景</a></dd>
+</dl>
+</div>
+<div class="lb336x280"><script>dy("lb336x280_1");</script></div>
+<div class="h">
+<dl>
+<dt>猜你也喜欢看这些 ······ </dt>
+<dd><a href="https://www.lanrentuku.com/bg/b/xinxingbeijing.html"><p><img src="./1_files/010945335.jpg" alt="心形网页背景" class="f" style="height: 50px; width: 75px; left: -12.5px; top: 0px;"></p>心形网页背景<span class="l">背景专辑</span><span class="t">01-19</span></a></dd><dd><a href="https://www.lanrentuku.com/bg/b/katongbeijing.html"><p><img src="./1_files/010947235.jpg" alt="卡通网页背景" class="f" style="height: 50px; width: 75px; left: -12.5px; top: 0px;"></p>卡通网页背景<span class="l">背景专辑</span><span class="t">01-19</span></a></dd><dd><a href="https://www.lanrentuku.com/bg/b/zhizhangbeijing.html"><p><img src="./1_files/010951285.jpg" alt="纸张网页背景" class="f" style="height: 50px; width: 75px; left: -12.5px; top: 0px;"></p>纸张网页背景<span class="l">背景专辑</span><span class="t">01-19</span></a></dd><dd><a href="https://www.lanrentuku.com/bg/b/qiangbibeijing.html"><p><img src="./1_files/010953095.jpg" alt="墙壁网页背景" class="f" style="height: 50px; width: 75px; left: -12.5px; top: 0px;"></p>墙壁网页背景<span class="l">背景专辑</span><span class="t">01-19</span></a></dd><dd><a href="https://www.lanrentuku.com/bg/b/micaibeijing.html"><p><img src="./1_files/010958085.jpg" alt="迷彩网页背景" class="f" style="height: 50px; width: 75px; left: -12.5px; top: 0px;"></p>迷彩网页背景<span class="l">背景专辑</span><span class="t">01-19</span></a></dd>
+</dl>
+</div>
+<div class="lb336x280"><script>dy("lb336x280_2");</script></div>
+<div class="h">
+<dl>
+<dt>这些是最新的 ······ </dt>
+<dd><a href="https://www.lanrentuku.com/bg/b/shishangbeijing.html"><p><img src="./1_files/071833515.jpg" alt="时尚网页背景" class="f" style="height: 50px; width: 75px; left: -12.5px; top: 0px;"></p>时尚网页背景<span class="l">背景专辑</span><span class="t">05-19</span></a></dd><dd><a href="https://www.lanrentuku.com/bg/b/muwenbeijing.html"><p><img src="./1_files/010954585.jpg" alt="木纹网页背景" class="f" style="height: 50px; width: 75px; left: -12.5px; top: 0px;"></p>木纹网页背景<span class="l">背景专辑</span><span class="t">05-19</span></a></dd><dd><a href="https://www.lanrentuku.com/bg/b/buwenbeijing.html"><p><img src="./1_files/151242455.jpg" alt="布纹网页背景" class="f" style="height: 50px; width: 75px; left: -12.5px; top: 0px;"></p>布纹网页背景<span class="l">背景专辑</span><span class="t">05-19</span></a></dd><dd><a href="https://www.lanrentuku.com/bg/b/shiwenbeijing.html"><p><img src="./1_files/5-1502130029520-L.jpg" alt="石纹网页背景" class="f" style="height: 50px; width: 75px; left: -12.5px; top: 0px;"></p>石纹网页背景<span class="l">背景专辑</span><span class="t">05-16</span></a></dd><dd><a href="https://www.lanrentuku.com/bg/b/baowenbeijing.html"><p><img src="./1_files/071826135.jpg" alt="豹纹网页背景" class="f" style="height: 50px; width: 75px; left: -12.5px; top: 0px;"></p>豹纹网页背景<span class="l">背景专辑</span><span class="t">01-19</span></a></dd>
+</dl>
+</div>
+<div class="lb336x280"><script>dy("lb336x280_3");</script></div>
+    <br>
+</div><!-- /r -->
+
+<!--底部开始-->
+<a style="display: block; width: 1200px; margin: 10px auto;clear:both;" href="http://www.picxiaobai.com/?sem=lanrentuku" target="_blank"><img tyle="width: 100%;" src="./1_files/txb.jpg"></a><div id="footer">
+<div class="about">
+<dl>
+<dt>关于</dt>
+ <dd><a href="https://www.lanrentuku.com/about/aboutus.html">关于我们</a></dd>
+ <dd><a href="https://www.lanrentuku.com/about/values.html">我们的价值观</a></dd>
+ <dd><a href="https://www.lanrentuku.com/about/event.html">大事记</a></dd>
+ <dd><a href="https://www.lanrentuku.com/about/copyright.html">版权声明</a></dd>
+ <dd><a href="https://www.lanrentuku.com/about/ad.html">广告服务</a></dd> 
+ <dd><a href="https://www.lanrentuku.com/about/contactus.html">联系我们</a></dd>
+</dl>
+<dl>
+<dt>帮助</dt>
+ <dd><a href="https://www.lanrentuku.com/about/help.html">常见问题</a></dd>
+ <dd><a href="https://www.lanrentuku.com/about/sitemap.html">网站地图</a></dd>
+ <dd><a href="https://www.lanrentuku.com/about/joinus.html">加入我们</a></dd>
+ <dd><a href="https://www.lanrentuku.com/about/tougao.html">网友投稿</a></dd>
+ <dd><a href="https://www.lanrentuku.com/links.php">友情链接</a></dd>
+ <dd><a href="https://www.lanrentuku.com/about/guestbook.html">在线留言</a></dd>
+</dl>
+<dl>
+<dt>收藏</dt>
+ <dd><a onclick="addToFavorite()">Ctrl+D收藏</a></dd>
+ <dd><a href="https://www.lanrentuku.com/shortcut.php">放到桌面</a></dd>
+ <dd><a href="https://www.lanrentuku.com/about/rssmap.html">订阅rss</a></dd>
+</dl>
+<dl>
+<dt>关注</dt>
+ <dd><a href="http://weibo.com/u/2556500765" target="_blank">新浪微博</a></dd>
+ <dd><a href="http://huaban.com/lanrentuku" target="_blank">花瓣</a></dd> 
+ <dd><a href="http://lanrentuku.lofter.com/" target="_blank">懒人博客</a></dd>
+</dl>
+    </div>
+<div class="jinbu">
+<dl>
+<dt>我们一直在进步</dt>
+     <script>dy("jinbu");</script><dd>05月10日 Veer正版图片推荐</dd><dd>04月18日 懒人工具箱改版更新</dd><dd>04月15日 优化网站结构</dd><dd>03月28日 网站SSL化</dd><dd>...</dd>
+</dl>
+    </div>
+<span class="copyright">Copyright &#169; 2006-2020 <a href="https://www.lanrentuku.com/">lanrentuku.com</a> All Rights Reserved. Powered by <a href="http://www.dedecms.com/">DedeCMS</a></span>
+<span class="beian"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=21112102000094">辽公网安备21112102000094号</a>　<a href="http://beian.miit.gov.cn/">京ICP备08001501号</a></span>
+</div>
+<a title="返回顶部" class="top" href="https://www.lanrentuku.com/bg/b/toumingbeijing.html#"></a>
+<!--底部结束-->
+</div><!-- /b -->
+<span style="display:none">
+<script>dy("tj");</script>
+</span>
+
+<div class="blockUI" style="display:none"></div><div class="blockUI blockOverlay" style="z-index: 1000; border: none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: rgb(0, 0, 0); opacity: 0.6; cursor: wait; position: fixed;"></div><div class="blockUI blockMsg blockPage" style="z-index: 1011; position: fixed; padding: 0px; margin: 0px 0px 0px -45%; width: 90%; top: 8%; left: 50%; text-align: center; color: rgb(0, 0, 0); border: 8px solid rgb(255, 255, 255); background-color: rgb(255, 255, 255); cursor: pointer; height: 84%;"><div id="preview" style="background: url(&quot;//img.lanrentuku.com/img/allimg/1305/5-13050GTF9.png&quot;); display: block;">
+<div class="download_link"><a href="https://www.lanrentuku.com/savepic/img/allimg/1305/5-13050GTF9.png">↓ 保存当前背景 ↓</a></div>
+<div class="prevButton"></div>
+<div class="nextButton"></div>
+<div class="closeButton"></div>
+<div class="blockDescription">温馨提示：按键盘&lt; &gt;方向键可左右翻页</div>
+</div></div></body></html>
