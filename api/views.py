@@ -1,4 +1,4 @@
-import json
+import datetime
 from django.shortcuts import render
 from django.shortcuts import redirect, reverse
 from django.http import JsonResponse
@@ -38,7 +38,21 @@ def borrow_history(request):
     :param request:
     :return: 一个 json 数据 data ，包括已登录用户已归还的书籍借阅历史，每条数据包括 id，book，borrowed_time,return_time,cost,balance
     """
-    pass
+    login_user = find_user(request)
+    log_li = models.Log.objects.filter(user=login_user.id)
+    data = []
+    for log in log_li:
+        each_data = {
+            'id': log.id,
+            'book': log.book.title,
+            'borrowed_time': log.borrowed_time.strftime('%Y-%m-%d %H:%M'),
+            'return_time': log.return_time.strftime('%Y-%m-%d %H:%M'),
+            'cost': log.cost,
+            'balance': log.balance
+        }
+        data.append(each_data)
+    result = {'count': log_li.count(), 'data': data}
+    return JsonResponse(result)
 
 
 def borrow_info(request):
@@ -76,7 +90,7 @@ def balance_change(request):
         each_data = {
             'id': change.id,
             'time': change.time.strftime('%Y-%m-%d %H:%M'),
-            'action': change.action,
+            'action': change.get_action_display(),
             'change_num': change.change_num,
             'balance': change.balance,
         }
@@ -105,11 +119,34 @@ def borrow_book(request):
 
 def return_book(request):
     """
-    接收 borrow_info_id session_id 查看是否逾期,未逾期还书成功，加入借书历史，删除此条记录，逾期需要扣除费用后完成此操作，还需要扣费成功后，增加用户余额变化情况。
+    接收 borrow_info_id session_id 查看是否逾期,未逾期还书成功，加入借书历史，删除此条记录，逾期需要扣除费用后完成此操作，还需要扣费成功后，
+    增加用户余额变化情况。同时还需要将书籍的借阅数量减 1 。
     :param request:
     :return:
     """
-    pass
+    login_user = find_user(request)
+    borrowed_id = request.GET.get('borrow_info')
+    borrowed_info = models.BorrowInfo.objects.get(id=borrowed_id)
+    cost = 0
+    balance = login_user.balance
+    print(borrowed_info.is_timeout)
+    if borrowed_info.is_timeout():
+        days = (datetime.datetime.now() - borrowed_info.return_ddl).days
+        print(days)
+        cost = round(days * 0.1, 1)
+        balance = round(login_user.balance - cost, 1)
+        print(cost, balance)
+        models.BalanceChange(user=login_user, action='cost', time=datetime.datetime.now(), change_num=cost,
+                             balance=balance).save()
+    print(borrowed_info.book.id)
+    book = models.Book.objects.get(id=borrowed_info.book.id)
+    book.borrowed_num -= 1
+    book.save()
+    models.Log(user=login_user, book=borrowed_info.book, borrowed_time=borrowed_info.borrowed_time,
+               return_time=datetime.datetime.now(), cost=cost, balance=balance).save()
+    borrowed_info.delete()
+    result = {'message': '您已还书成功，此次消费{}元'.format(cost)}
+    return JsonResponse(result)
 
 
 def login_check(request):
@@ -118,12 +155,28 @@ def login_check(request):
     :param request:
     :return: 登录状态，成功返回成功状态，失败返回失败原因
     """
+    print(request.path)
     username = request.POST.get('username')
     password = request.POST.get('password')
-    login_user = models.User.objects.get(name=username)
-    request.session['user_id'] = login_user.id
-    request.session['user_name'] = login_user.name
-    return redirect(reverse('handle:home'))
+    print(username, password)
+    status = False
+    try:
+        login_user = models.User.objects.get(name=username)
+        if password == login_user.password:
+            request.session['user_id'] = login_user.id
+            request.session['user_name'] = login_user.name
+            status = True
+            message = '登录成功'
+            print(True)
+        else:
+            message = '密码不正确'
+    except Exception as e:
+        print(e)
+        message = '用户名不存在'
+    data = {'status': status, 'message': message}
+    return JsonResponse(data)
+
+
 
 
 

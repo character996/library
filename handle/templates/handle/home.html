@@ -3,8 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
 home
+<button id="borrow_history">借书历史</button>
+<button id="borrow_info">未归还书籍</button>
+<button id="bu_balance_change">账户变化历史</button>
+<a href="logout/">注销</a>
+<div id="borrowed_info">
+    <table border="1" id="info_table_header">
+        <tr>
+            <th>订单编号</th>
+            <th>书籍名称</th>
+            <th>借书时间</th>
+            <th>归还期限</th>
+            <th>是否超时</th>
+        </tr>
+    </table>
+</div>
+<div id="borrowed_history">
+    <table border="1" id="history_table_header">
+        <tr>
+            <th>订单编号</th>
+            <th>书籍名称</th>
+            <th>借书时间</th>
+            <th>归还时间</th>
+            <th>订单消费</th>
+            <th>账户余额</th>
+        </tr>
+    </table>
+</div>
+<div id="balance_change">
+    <table border="1" id="balance_table_header">
+        <tr>
+            <th>订单编号</th>
+            <th>时间</th>
+            <th>变化类型</th>
+            <th>金额数目</th>
+            <th>账户余额</th>
+        </tr>
+    </table>
+</div>
+搜索书籍<input type="text" id="search_title">
+<input type="submit" id="search_book">
+<script>
+    function get_json(url,sector){
+        $.ajax({
+        url:url,
+        type:'GET',
+        success:function(result){
+            console.log(result)
+            data = result.data
+            var con = ''
+            for (var i=0;i<data.length;i++){
+                if (sector == '#info_table_header'){
+                    console.log('true')
+                    con += '<tr><td>'+data[i].id+'</td><td>'+data[i].book+'</td><td>'+data[i].borrowed_time+
+                    '</td><td>'+data[i].return_ddl+'</td><td>'+data[i].is_timeout+'</td>'
+                    con += '<td><button value="'+data[i].id+'">去还书</button></td></tr>'
+                }else if(sector == '#history_table_header'){
+                    console.log('false')
+                    con += '<tr><td>'+data[i].id+'</td><td>'+data[i].book+'</td><td>'+data[i].borrowed_time+
+                    '</td><td>'+data[i].return_time+'</td><td>'+data[i].cost+'</td><td>'+data[i].balance+'</td></tr>'
+                }else{
+                    con += '<tr><td>'+data[i].id+'</td><td>'+data[i].time+'</td><td>'+data[i].action+
+                    '</td><td>'+data[i].change_num+'</td><td>'+data[i].balance+'</td></tr>'
+                }
+            }
+            $(sector).append(con)
+        }
+    })
+    }
+    $("#borrow_info").click(function(){
+        get_json('/api/borrow_info/','#info_table_header')
+    })
+    $("#borrow_history").click(function(){
+        get_json('/api/borrow_history/','#history_table_header')
+
+    })
+    $("#bu_balance_change").click(function(){
+        get_json('/api/balance_change/','#balance_table_header')
+    })
+    $('#info_table_header').on('click','button',function(){
+        console.log('aaa')
+        $.ajax({
+            url: '/api/return_book/',
+            type: 'GET',
+            data: {
+                'borrow_info': $(this).val(),
+            },
+            success:function(result){
+                alert(result.message)
+            }
+        })
+    })
+    $('#search_book').click(function(){
+        var url = '/handle/search_book/?title=' + $('#search_title').val()
+        $(window).attr('location', url);
+    })
+
+</script>
 </body>
 </html>
