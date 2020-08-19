@@ -6,5 +6,68 @@
 </head>
 <body>
 search_book
+<a href="/handle/home/">返回主页</a>
+<div id="search_book">
+    <table border="1" id="info_table_header">
+        <tr id="table_header">
+            <th>书籍编号</th>
+            <th>书籍名称</th>
+            <th>作者</th>
+            <th>出版日期</th>
+            <th>馆内现存数量</th>
+            <th>是否可借</th>
+        </tr>
+    </table>
+</div>
+
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script>
+    function GetUrlPara(){
+　　　　var url = document.location.toString();
+　　　　var arrUrl = url.split("?");
+　　　　var para = arrUrl[1];
+　　　　return para;
+　　}
+    function get_json(){
+        $.ajax({
+            url:'/api/book_search/?' + GetUrlPara(),
+            type:'GET',
+            success:function(result){
+                console.log(result)
+                data = result.data
+                var con = ''
+                for (var i=0;i<data.length;i++){
+                    con += '<tr><td>'+data[i].id+'</td><td>'+data[i].title+'</td><td>'+data[i].author+
+                    '</td><td>'+data[i].pub_date+'</td><td>'+data[i].num+'</td><td>'+data[i].can_borrowed+'</td>'
+                    if (data[i].can_borrowed){
+                        con += '<td><button value="'+data[i].id+'">借书</button></td></tr>'
+                    }
+                }
+                $('#info_table_header').append(con)
+            }
+        })
+    }
+    get_json()
+    $('#info_table_header').on('click','button',function(){
+        console.log('aaa')
+        $.ajax({
+            url: '/api/borrow_book/',
+            type: 'GET',
+            data: {
+                'book_id': $(this).val(),
+            },
+            success:function(result){
+                console.log(result)
+                alert(result.message)
+                if (result.status == 0){
+                    $(window).attr('location', '/handle/recharge/');
+                }
+                $('#table_header').siblings().remove()
+                get_json()
+            }
+        })
+    })
+</script>
 </body>
 </html>

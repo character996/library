@@ -105,7 +105,21 @@ def book_search(request):
     :param request: request.GET.get('title')
     :return: 一个 json 数据 books ，每条数据包括 id，title，is_borrow,author,pub_date,tag
     """
-    pass
+    title = request.GET.get('title')
+    books = models.Book.objects.filter(title__contains=title)
+    data = []
+    for book in books:
+        tmp = {
+            'id': book.id,
+            'title': book.title,
+            'pub_date': book.pub_date,
+            'author': book.author,
+            'num': book.num - book.borrowed_num,
+            'can_borrowed': book.can_borrowed(),
+        }
+        data.append(tmp)
+    result = {'count': books.count(), 'data': data}
+    return JsonResponse(result)
 
 
 def borrow_book(request):
@@ -114,7 +128,31 @@ def borrow_book(request):
     :param request: book_id, session id
     :return: 一个 json 数据 data，包括 借书是否成功信息
     """
-    pass
+    book_id = request.GET.get('book_id')
+    book = models.Book.objects.get(id=book_id)
+    login_user = find_user(request)
+    borrowed_books = login_user.borrowinfo_set.all()
+    user_has_borrowed_num = borrowed_books.count()
+    user_borrowed_books_price = 0
+    status = 1
+    for borrowed_book in borrowed_books:
+        user_borrowed_books_price += borrowed_book.book.price
+    if login_user.balance > 0:
+        if user_has_borrowed_num < 3 or login_user.balance > user_borrowed_books_price:
+            print(book.borrowed_num)
+            book.borrowed_num += 1
+            book.save()
+            print(book.borrowed_num)
+            borrowed_info = models.BorrowInfo(user=login_user, book=book)
+            borrowed_info.save()
+            message = '借书成功，归还时间为{}'.format(borrowed_info.return_ddl.strftime('%Y-%m-%d %H:%M'))
+        else:
+            message = '所借书籍超过了 3 本，请归还一些书籍或充值足够的余额'
+    else:
+        message = '账户余额不足 0 元，请尽快充值'
+        status = 0
+    result = {'message': message, 'status': status}
+    return JsonResponse(result)
 
 
 def return_book(request):
@@ -142,6 +180,8 @@ def return_book(request):
     book = models.Book.objects.get(id=borrowed_info.book.id)
     book.borrowed_num -= 1
     book.save()
+    login_user.balance = login_user.balance - cost
+    login_user.save()
     models.Log(user=login_user, book=borrowed_info.book, borrowed_time=borrowed_info.borrowed_time,
                return_time=datetime.datetime.now(), cost=cost, balance=balance).save()
     borrowed_info.delete()
