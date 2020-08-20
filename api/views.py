@@ -2,6 +2,8 @@ import datetime
 from django.shortcuts import render
 from django.shortcuts import redirect, reverse
 from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.db.models import Q
 
 from . import models
 # Create your views here.
@@ -189,13 +191,13 @@ def return_book(request):
     return JsonResponse(result)
 
 
+@csrf_exempt
 def login_check(request):
     """
     根据登录信息，确认用户信息是否填写正确
     :param request:
     :return: 登录状态，成功返回成功状态，失败返回失败原因
     """
-    print(request.path)
     username = request.POST.get('username')
     password = request.POST.get('password')
     print(username, password)
@@ -216,6 +218,30 @@ def login_check(request):
     data = {'status': status, 'message': message}
     return JsonResponse(data)
 
+
+@csrf_exempt
+def register_check(request):
+    """
+    注册信息检查，前端页面已经检查了数据是否符合要求，需要检查用户名是否存在和身份证号是否唯一
+    :param request:
+    :return:
+    """
+    username = request.POST.get('username')
+    password = request.POST.get('password')
+    tel = request.POST.get('tel')
+    id_card = request.POST.get('id_card')
+    sex = request.POST.get('sex')
+
+    message = '注册成功'
+    status = False
+    register_user = models.User.objects.filter(Q(name=username) | Q(id_card=id_card))
+    if not register_user:
+        models.User(name=username, password=password, id_card=id_card, tel=tel, sex=sex).save()
+        status = True
+    else:
+        message = '此用户名或身份证号已经注册'
+    data = {'status': status, 'message': message}
+    return JsonResponse(data)
 
 
 

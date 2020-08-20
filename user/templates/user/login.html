@@ -1,7 +1,7 @@
 {% load static %}
 <!document html>
 <html lang="en">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,36 +9,57 @@
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="{% static 'user/css/login.css' %}" rel="stylesheet"/>
     <title>登录</title>
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-            <div class="col">
-                <form class="form-login" action="{% url 'api:login_check' %}" method="post">
-                        <div class="alert alert-warning">请填写登录信息</div>
-                  {% csrf_token %}
-                  <h3 class="text-center">欢迎登录</h3>
-                  <div class="form-group">
-                      <label for="id_username">用户名:</label>
-                      <input type="text" name="username" id="id_username" class="form_control" autofocus required maxlength="128">
-                    </div>
-                    <div class="form-group">
-                       <label for="id_password">密码:</label>
-                      <input type="password" name="password" id="id_password" class="form_control" autofocus required maxlength="128">
-                    </div>
-                  <div>
-                      <a href="{% url 'user:register' %}" class="text-success " ><ins>新用户注册</ins></a>
-                      <button type="submit" class="btn btn-primary float-right">登录</button>
-                  </div>
-                </form>
-            </div>
+        <div class="col">
+<!--            <form class="form-login" action="{% url 'api:login_check' %}" method="post">-->
+<!--                    {% csrf_token %}-->
+                <div id="message" class="alert alert-warning">请填写登录信息</div>
+                    <h3 class="text-center">欢迎登录</h3>
+                <div class="form-group">
+                    <label for="id_username">用户名:</label>
+                    <input type="text" name="username" id="id_username" class="form_control" autofocus required maxlength="128">
+                </div>
+                <div class="form-group">
+                    <label for="id_password">密码:</label>
+                    <input type="password" name="password" id="id_password" class="form_control" autofocus required maxlength="128">
+                </div>
+                <div>
+                    <a href="{% url 'user:register' %}" class="text-success " ><ins>新用户注册</ins></a>
+                    <button id='submit' type="submit" class="btn btn-primary float-right">登录</button>
+                </div>
+<!--            </form>-->
+        </div>
     </div> <!-- /container -->
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    {#    以下三者的引用顺序是固定的#}
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdn.bootcss.com/popper.js/1.15.0/umd/popper.js"></script>
     <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        $('#submit').click(function(){
+            $.ajax({
+                url: '/api/login_check/',
+                type: 'POST',
+                data: {
+                    'username': $('#id_username').val(),
+                    'password': $('#id_password').val(),
+                },
+                dataType: 'json',
+                success: function(result){
+                                        console.log('success')
+                                        console.log(result)
+                    if (result.status){
+                                            console.log('true')
+                        $(window).attr('location', '/handle/home/')
+                    }else{
+                        console.log(result.message)
+                        $('#message').text(result.message)
+                    }
+                }
+            })
+        })
+    </script>
 
-  </body>
+</body>
 </html>
