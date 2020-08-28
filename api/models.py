@@ -54,7 +54,7 @@ class User(models.Model):
         ('male', "男"),
         ('female', "女"),
     )
-    name = models.CharField(verbose_name='姓名', max_length=30)
+    name = models.CharField(verbose_name='姓名', max_length=30, unique=True)
     password = models.CharField(verbose_name='密码', max_length=64)
     borrowed_books = models.ManyToManyField(Book, verbose_name='借阅书籍', through='BorrowInfo')
     tel = models.CharField(verbose_name='电话号码', max_length=11)
@@ -69,7 +69,7 @@ class User(models.Model):
         ordering = ['id']
 
     def __str__(self):
-        return str(self.id) + " " + self.name
+        return self.name
 
 
 class BorrowInfo(models.Model):
@@ -109,7 +109,7 @@ class Log(models.Model):
     class Meta:
         verbose_name = '借阅日志'
         verbose_name_plural = verbose_name
-        ordering = ['borrowed_time']
+        ordering = ['-return_time']
         db_table = 'log'
 
     def __str__(self):

@@ -10,10 +10,13 @@ home
 <button id="borrow_history">借书历史</button>
 <button id="borrow_info">未归还书籍</button>
 <button id="bu_balance_change">账户变化历史</button>
-<a href="logout/">注销</a>
-<div id="borrowed_info">
+<a href="/logout/">注销</a>
+<a href="/handle/recharge/">充值</a>
+搜索书籍<input type="text" id="search_title">
+<input type="submit" id="search_book">
+<div id="borrowed_info" class="table_content">
     <table border="1" id="info_table_header">
-        <tr>
+        <tr id="info_header">
             <th>订单编号</th>
             <th>书籍名称</th>
             <th>借书时间</th>
@@ -22,9 +25,9 @@ home
         </tr>
     </table>
 </div>
-<div id="borrowed_history">
+<div id="borrowed_history" class="table_content">
     <table border="1" id="history_table_header">
-        <tr>
+        <tr id="history_header">
             <th>订单编号</th>
             <th>书籍名称</th>
             <th>借书时间</th>
@@ -34,9 +37,9 @@ home
         </tr>
     </table>
 </div>
-<div id="balance_change">
+<div id="balance_change" class="table_content">
     <table border="1" id="balance_table_header">
-        <tr>
+        <tr id="balance_header">
             <th>订单编号</th>
             <th>时间</th>
             <th>变化类型</th>
@@ -45,9 +48,8 @@ home
         </tr>
     </table>
 </div>
-搜索书籍<input type="text" id="search_title">
-<input type="submit" id="search_book">
 <script>
+    $('.table_content').hide()
     function get_json(url,sector){
         $.ajax({
         url:url,
@@ -76,13 +78,22 @@ home
     })
     }
     $("#borrow_info").click(function(){
+        $('.table_content').hide()
+        $('#info_header').siblings().remove()
+        $('#borrowed_info').show()
         get_json('/api/borrow_info/','#info_table_header')
     })
     $("#borrow_history").click(function(){
+        $('.table_content').hide()
+        $('#history_header').siblings().remove()
+        $('#borrowed_history').show()
         get_json('/api/borrow_history/','#history_table_header')
 
     })
     $("#bu_balance_change").click(function(){
+        $('.table_content').hide()
+        $('#balance_header').siblings().remove()
+        $('#balance_change').show()
         get_json('/api/balance_change/','#balance_table_header')
     })
     $('#info_table_header').on('click','button',function(){
@@ -95,6 +106,8 @@ home
             },
             success:function(result){
                 alert(result.message)
+                $("#borrow_info").click()
+
             }
         })
     })

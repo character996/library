@@ -149,7 +149,8 @@ def borrow_book(request):
             borrowed_info.save()
             message = '借书成功，归还时间为{}'.format(borrowed_info.return_ddl.strftime('%Y-%m-%d %H:%M'))
         else:
-            message = '所借书籍超过了 3 本，请归还一些书籍或充值足够的余额'
+            status = -1
+            message = '所借书籍超过了 3 本，请归还一些书籍或充值{}元'.format(user_borrowed_books_price-login_user.balance)
     else:
         message = '账户余额不足 0 元，请尽快充值'
         status = 0
@@ -242,6 +243,47 @@ def register_check(request):
         message = '此用户名或身份证号已经注册'
     data = {'status': status, 'message': message}
     return JsonResponse(data)
+
+
+def get_user(request):
+    """
+    返回用户的余额情况
+    :param request:
+    :return:
+    """
+    login_user = find_user(request)
+    is_arrears = False
+    message = '您的账户余额为{}元'.format(login_user.balance)
+    data = {'is_arrears': is_arrears, 'message': message}
+    return JsonResponse(data)
+
+
+def recharge(request):
+    """
+    根据request中的金额情况，用户充值金额，变化用户金额，添加用户余额变化历史。
+    :param request:
+    :return: 金额充值后的情况
+    """
+    login_user = find_user(request)
+    money_num = int(request.GET.get('money_num'))
+    status = False
+    can_borrow = False
+    if 0 < money_num < 1000:
+        login_user.balance += money_num
+        login_user.save()
+        balance =  login_user.balance
+        models.BalanceChange(user=login_user, action='recharge', time=datetime.datetime.now(), change_num=money_num,
+                             balance=balance).save()
+        status = True
+        message = '充值成功，当前余额为{}元'.format(login_user.balance)
+        if balance > 0:
+            can_borrow = True
+    else:
+        message = '充值金额数目出错，请检查后重试'
+    data = {'status': status, 'message': message, 'can_borrow': can_borrow}
+    return JsonResponse(data)
+
+
 
 
 

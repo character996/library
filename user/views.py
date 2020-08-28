@@ -15,6 +15,8 @@ def detail_passwd(passwd, salt='add'):
 
 
 def login(request):
+    if request.session.get('user_id'):
+        return redirect(reverse('handle:home'))
 
     return render(request, 'user/login.html')
 
@@ -64,7 +66,7 @@ def register(request):
 
 
 def logout(request):
-    if not request.session.get('is_login', None):
+    if not request.session.get('user_id', None):
         # 如果没有登录,跳转到登录页面
         return redirect(reverse('user:login'))
     request.session.flush()

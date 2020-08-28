@@ -62,6 +62,8 @@ search_book
                 alert(result.message)
                 if (result.status == 0){
                     $(window).attr('location', '/handle/recharge/');
+                }else if(result.status == -1){
+                    window.history.back();
                 }
                 $('#table_header').siblings().remove()
                 get_json()
